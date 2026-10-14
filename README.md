@@ -15,7 +15,7 @@ If you'd like to learn more about the BioAmp EXG Pill, refer to their official d
 If you wire it differently (different channel, different PGA range, different data rate), you'll need to change the config bytes in `bioampexgpillclib_init()` and the `LSB` constant to match — see **Function reference** below for what those values mean.
 *Please be very careful when wiring/soldering. It is easy to short-circuit your beautiful BioAmp EXG Pill if you do the wrong thing.*   
 
-<img width="5712" height="4284" alt="image0 (2)" src="https://github.com/user-attachments/assets/1908a04d-d4eb-4ef7-8423-c143453147d1" />
+<img width="1200" height="900" alt="bioampclibrarypic" src="https://github.com/user-attachments/assets/7703430b-c3ad-4953-9ef5-d11778baf212" />
 Forgive me for the sloppy camera work- the wiring that feeds data from the human to the EXG Pill is a bit long and squiggly.   
 
 ## Building
