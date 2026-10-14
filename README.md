@@ -1,6 +1,6 @@
 # bioampexgpillclib
 
-While working on a seperate project for BCIs, I realized that utilizing Python was not going to cut it in the long run. After a bit of development, I ended up creating a small C library for reading EEG/EXG data from an Upside Down Labs BioAmp EXG Pill through an ADS1115 ADC over I2C, on Linux (developed on a Raspberry Pi 4). I realized that UpsideDown Lab (the creators of BioAmp) does not seem to have a standard C library nor does one exist in the wild, so low and behold, the "first" C library for the product! I feel special already. 
+While working on a separate project for BCIs, I realized that utilizing Python was not going to cut it in the long run. After a bit of development, I ended up creating a small C library for reading EEG/EXG data from an Upside Down Labs BioAmp EXG Pill through an ADS1115 ADC over I2C, on Linux (developed on a Raspberry Pi 4). I realized that UpsideDown Lab (the creators of BioAmp) does not seem to have a standard C library nor does one exist in the wild, so low and behold, the "first" C library for the product! I feel special already. 
 
 It handles opening the I2C bus, configuring the ADS1115, reading raw samples, and converting them to volts. It does not do filtering, FFT, or classification — those live further up the stack, on top of this library.    
 
@@ -13,6 +13,10 @@ If you'd like to learn more about the BioAmp EXG Pill, refer to their official d
 - ADS1115 configured for: continuous conversion mode, single-ended channel A0, ±4.096V PGA range, 128 SPS
 
 If you wire it differently (different channel, different PGA range, different data rate), you'll need to change the config bytes in `bioampexgpillclib_init()` and the `LSB` constant to match — see **Function reference** below for what those values mean.
+*Please be very careful when wiring/soldering. It is easy to short-circuit your beautiful BioAmp EXG Pill if you do the wrong thing.*   
+
+<img width="5712" height="4284" alt="image0 (2)" src="https://github.com/user-attachments/assets/1908a04d-d4eb-4ef7-8423-c143453147d1" />
+Forgive me for the sloppy camera work- the wiring that feeds data from the human to the EXG Pill is a bit long and squiggly.   
 
 ## Building
 
