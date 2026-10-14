@@ -2,3 +2,9 @@
 *.a
 test
 main
+build/
+dist/
+wheelhouse/
+*.egg-info/
+*.so
+__pycache__/

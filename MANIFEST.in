@@ -1,0 +1,3 @@
+include LICENSE README.md
+include bioampexgpillClib.c bioampexgpillClib.h
+recursive-include src *.c *.py

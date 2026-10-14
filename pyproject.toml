@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bioampexgpillclib"
+version = "0.1.0"
+description = "Fast C-backed reader for the BioAmp EXG Pill (ADS1115) over I2C on Linux"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+classifiers = [
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Hardware",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["bioampexgpillclib"]
+
+[tool.cibuildwheel]
+build = "cp3*-manylinux*"
+skip = "cp36-* cp37-*"
